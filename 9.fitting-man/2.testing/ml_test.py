@@ -1,7 +1,7 @@
 # This script retrains all ML models from the tuned hyparameters, and derives intrinsic / dynamic energy contributions. 
-# Note that some of the comments may not correspond to the publication.
+# Note that some of the notation may not correspond to the publication.
 # 	shff = shuffled ds, meaning that certain feature was omitted by setting them to zero. 
-# 	Note that setting to zero is mandatory, remove from the feature vector will yield unidentical ML models.
+# 	Note that setting to zero is mandatory, removing features from the feature vector will yield unidentical ML models.
 # Zilin Song, 30OCT2019
 #
 
