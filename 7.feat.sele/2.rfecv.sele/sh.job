@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH -J rfecv
+#SBATCH -p htc 
+#SBATCH --array=0-6
+#SBATCH --mem=8GB
+
+source activate
+conda activate scikit
+
+python rfecv.py $SLURM_ARRAY_TASK_ID

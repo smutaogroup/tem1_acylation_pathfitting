@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH -J ml_test 
+#SBATCH -o log
+#SBATCH -n 1
+#SBATCH -p development 
+#SBATCH --mem=8GB
+
+source activate
+conda activate scikit
+
+python ml_test.py 

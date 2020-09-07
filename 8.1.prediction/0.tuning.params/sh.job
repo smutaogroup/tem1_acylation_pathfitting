@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH -J ####
+#SBATCH -n 1
+#SBATCH -o log
+#SBATCH --array=0-17
+#SBATCH -p htc 
+#SBATCH --mem=4GB
+
+source activate
+conda activate scikit
+
+python @@@@ ${SLURM_ARRAY_TASK_ID} #@#@ @#@#

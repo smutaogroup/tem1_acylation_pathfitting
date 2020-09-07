@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH -J jjjj
+#SBATCH -o log
+#SBATCH -n 1
+#SBATCH -p medium-mem-1-s 
+#SBATCH --mem=8GB
+
+source activate
+conda activate scikit
+
+python 1111 2222 3333 4444 5555

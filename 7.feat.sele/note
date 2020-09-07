@@ -1,0 +1,5 @@
+0.man.sele:    manual feature selection
+1.kbest.sele:  univariate statistical analysis using mutual info
+2.rfecv.sele:  multi-variate statistical analysis using Recursive Feature Elimination with LOGO-CV, using linear-SVR.
+
+Note that the datasets are built in here.
