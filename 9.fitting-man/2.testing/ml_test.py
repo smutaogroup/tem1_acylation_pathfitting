@@ -119,15 +119,16 @@ def calc_path_gradient(model, X_test, which_features, ):
     Perturbation slopes (PS) must be WEIGHTED to tell the ACTUAL importance.
     PS is nothing but a numerical importance:
 
-        If we have a h-bond distance which is rarely changd thoughout the reaction
-        and a proton transfer distance which is largely changed,
-        To create a similiar energy profile, 
-
+        If an energy profile is created by a static H-bonding interaction and
+	a proton transfer process,
         The H-bond distance does not have to fluctuate much, while the proton-trans
-        distance will have to suffer huge numerical change,
+        distance will have to suffer huge change,
 
-        Therefore in this case, the H-bond distance is going to be way much more
-        important as a small numerical change of H-bond could largely impact the PES.
+        In this case, the H-bond distance is going to be way much more
+        important as a small numerical change of H-bond could largely impact the energy profile.
+	
+	This is not true, the feature domain must be balanced by the weighting factor
+	to tell compatible feature importance.
 
         So we have to weight the PS to tell the actual importance.
     '''
